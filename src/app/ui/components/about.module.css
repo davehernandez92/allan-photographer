@@ -1,0 +1,43 @@
+.sloganTxt{
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-size: 22px;
+    padding: 0 1.2rem;
+}
+.emphasis{
+    font-style: italic;
+    font-weight: 600;
+}
+.helloContainer{
+    background: linear-gradient(
+        to left,  
+        rgb(254, 254, 254),
+        rgb(241, 247, 252)
+    );
+    padding: 2rem 1.2rem 3rem 1.2rem;
+    
+    
+    
+}
+.hello{
+    margin-top: 2.6rem;
+}
+.hello__title{
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+}
+.hello__txt{
+    letter-spacing: 1.1px;
+    margin-bottom: .8rem;
+}
+.button{
+    margin: .5rem 0 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .sloganTxt{
+        width: 55%;
+        font-size: 35px;
+    }
+}

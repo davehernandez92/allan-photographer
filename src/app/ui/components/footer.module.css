@@ -1,0 +1,56 @@
+.footer{
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--brown))
+    )
+    rgb(var(--sand));
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content:space-around;
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+.logo{
+    width: 200px;
+    height: 120px;
+}
+.email__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.email__container a {
+    font-size: 1.2rem;
+}
+.social__txt{
+    text-align: center;
+}
+.social__emails  {
+    gap: 0.33rem;
+}
+.contact__phone{
+    margin-top: 2rem;
+}
+.contact__numbers{
+    gap: .8rem;
+    letter-spacing: 1.1px;
+}
+.contact__numbers span {
+    font-weight: bolder;
+    
+}
+
+@media screen and (min-width: 768px){
+    .footer{
+        flex-direction: row;
+    }
+    .wrapper{
+        width: 45%;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+}
+  

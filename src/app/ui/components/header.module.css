@@ -1,0 +1,122 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.7rem;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    
+  }
+  
+  .logoName {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 4;
+  }
+  .navbar__logo2{
+    color: var(--primary);
+  }
+  .menu__icon {
+    cursor: pointer;
+    width: auto;
+    z-index: 4;
+    
+  }
+  
+ 
+  .menu {
+    position: absolute;
+    top: -1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    z-index: 3;
+    
+  }
+  .menu__wrap{
+    margin: 2rem 0;
+    height: 100%;
+    display: flex;
+
+  }
+  .menu > li {
+    margin: 2rem;
+  }
+  
+  .menu__ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    
+  }
+  
+  .menu__ul > li > a {
+    color: var(--black);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+ 
+  .menu__txt[class*="currentLink"] {
+    text-decoration: underline;
+  }
+
+ 
+  @media screen and (min-width: 768px){
+    .menu{
+        height: 100dvh;
+        
+    }
+    .menu__ul > li > a {
+    
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+    }
+    .menu__wrap{
+      width:70% ;
+      height: auto;
+      justify-content: center;
+    
+  
+    }
+  } 
+  .reached-section .menu__icon path {
+    fill: #000;
+  }
+  
+
+@media screen and (min-width: 1020px) {
+  .navbar {
+    padding: 2% 7% 0 7%;
+      
+  }
+  .menu__ul > li > a {
+    
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    transition: all .3s ease-in-out;
+  }
+  .menu__ul > li > a:hover {
+    letter-spacing: 3.8px;
+   
+  }
+}
