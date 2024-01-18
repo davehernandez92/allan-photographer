@@ -6,8 +6,10 @@
   :root {
     --primary: hsl(41, 45%, 84%);
     --secondary:  #A17E7F;
-    --white: #F4F4F4;
-    --black: rgb(20, 20, 20);
+    --white: #fbfafa;
+    --black: hsl(240,10%, 3.9%);
+    --primary2: #114655;
+    --primary3: #BAADA1;
 
     --background: 254, 254, 254;
     --foreground: 240 10% 3.9%;
@@ -81,18 +83,12 @@
   padding: 0;
 }
   html {
-    
+    background-color: var(--white);
     box-sizing: border-box;
     font-family: var(--font-txtRegular);
   }
   body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
     font-size: 16px;
     }
   }

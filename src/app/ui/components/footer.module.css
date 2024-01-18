@@ -1,10 +1,5 @@
 .footer{
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--brown))
-    )
-    rgb(var(--sand));
+    
     display: flex;
     flex-direction: column;
     gap: 2rem;
