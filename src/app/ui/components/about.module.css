@@ -37,7 +37,59 @@
 
 @media screen and (min-width: 768px) {
     .sloganTxt{
-        width: 55%;
+        width: 65%;
         font-size: 35px;
+    }
+
+    .helloContainer{
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        padding: 4rem 3rem 0 3rem;
+    }
+    .hello__img{
+        width: 45%;
+        height: auto;
+    }
+
+    .hello{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        
+    }
+    
+    .hello__title{
+        font-size: 2.8rem;
+    }
+    .button{
+        width: max-content;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .helloContainer{
+        gap: 10rem;
+    }
+    .hello__img{
+        width: 492px;
+        height: 738px;
+    }
+
+    .hello{
+        width: 650px;
+    }
+    
+    .hello__title{
+        font-size: 3.3rem;
+    }
+    .hello__txt{
+        font-size: 1.3rem;
+    }
+    .button{
+        width: max-content;
     }
 }
