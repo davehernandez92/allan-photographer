@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { CldImage } from "next-cloudinary";
+
+
 import { Button } from "@/components/ui/button";
 import allan from "../../public/images/op1Mobil.webp";
 import nosotros from "../../public/images/nosotros.jpg";
@@ -242,8 +245,8 @@ export default function About() {
               viewport={{ once: true }}
               className={` mb-5 ${styles.img__back}`}
             >
-              <Image
-                src={nosotros3}
+              <CldImage
+                src={"https://res.cloudinary.com/dtsowbfck/image/upload/v1705449497/bodas/vestidoBodas.jpg"}
                 width={432}
                 height={650}
                 alt="Sesion de bodas "

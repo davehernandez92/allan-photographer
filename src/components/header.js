@@ -231,10 +231,11 @@ export default function Header() {
         <Link href="/">
           <Image
             src={logo}
-            width={200}
-            height={100}
+            width={180}
+            height={90}
+            priority={true}
             alt="Logo Allan Banuelos"
-            className={styles.navbar_logo}
+            className=' w-50 h-25'
           />
         </Link>
         {/* Hamburguer menu SVG  */}
