@@ -266,8 +266,8 @@ export default function About() {
           </div>
           <div className={`${styles.button__div}`}>
               <Button variant="outline" asChild>
-                <Link href="/servicios" className={styles.button__us}>
-                  Conoce mas
+                <Link href="/contacto" className={styles.button__us}>
+                  CONTACTANOS
                 </Link>
               </Button>
             </div>
