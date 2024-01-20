@@ -16,7 +16,7 @@ export default function Home() {
           transition: { delay: 0.3, duration: 0.5 },
         }}
         viewport={{ once: true }}
-      className={`h-screen relative ${styles.heroContainer}`}>
+      className={` h-dvh relative ${styles.heroContainer}`}>
         <div
           className={`absolute inset-0 bg-cover bg-center hidden md:block  ${styles.heroImg}`}
         >
@@ -38,10 +38,10 @@ export default function Home() {
         >
         <CldImage
           src="https://res.cloudinary.com/dtsowbfck/image/upload/v1705449384/bodas/eubnkvv6aqyx5vjebhx5.jpg"
-          width={606}
-          height={909}
+          width={923}
+          height={1300}
           alt="Imagen de boda background"
-          className=" absolute top-0 left-0 w-full h-full object-cover"
+          className=" absolute top-0 left-0 w-full h-full object-contain"
         />
          
         </div>

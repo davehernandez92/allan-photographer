@@ -90,6 +90,8 @@
   body {
     color: rgb(var(--foreground-rgb));
     font-size: 16px;
+    overflow-x: hidden; 
+
     }
   }
 

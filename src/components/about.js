@@ -10,24 +10,26 @@ import { Button } from "@/components/ui/button";
 import allan from "../../public/images/op1Mobil.webp";
 import nosotros from "../../public/images/nosotros.jpg";
 import nosotros2 from "../../public/images/nosotros2.jpg";
-import nosotros3 from "../../public/images/nosotros3.jpg";
+
 import nosotrosDesk from "../../public/images/nosotrosDesktop.jpg";
 import nosotrosDesk2 from "../../public/images/op3.jpg";
 import nosotrosDesk3 from "../../public/images/op2.webp";
 import styles from "../app/ui/components/about.module.css";
 
+import CarouselImg from "./CarouselImg";
+
 export default function About() {
   return (
     <div className="md:mb-8">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { delay: 0.3, duration: 0.5 },
+          transition: { delay: 0.3, duration: 0.3 },
         }}
         viewport={{ once: true }}
-        className={`w-full h-[70vh] md:h-[80vh] flex items-center justify-center`}
+        className={`w-full h-[60vh] md:h-[80vh] flex items-center justify-center`}
       >
         <p className={styles.sloganTxt}>
           Capturando la magia del amor, te damos la bienvenida a un universo
@@ -246,7 +248,7 @@ export default function About() {
               className={` mb-5 ${styles.img__back}`}
             >
               <CldImage
-                src={"https://res.cloudinary.com/dtsowbfck/image/upload/v1705449497/bodas/vestidoBodas.jpg"}
+                src={"bodas/vestidoBodas.jpg"}
                 width={432}
                 height={650}
                 alt="Sesion de bodas "
@@ -271,6 +273,8 @@ export default function About() {
             </div>
         </div>
       </motion.div>
+
+      <CarouselImg/>
     </div>
   );
 }
