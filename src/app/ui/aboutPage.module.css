@@ -26,4 +26,34 @@
         font-weight: 600;
     
     }
+    .button{
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .heading h1 {
+        font-size:3rem;
+        font-weight: 600;
+    
+    }
+    .nosotros{
+        
+        gap: 0;
+        padding: 0 5rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .txt__wrapR{
+        padding-left: 2rem;
+    }
+    .txt__wrapL{
+        padding-right: 2rem;
+    }
+    .imgBoda{
+        height: 590px;
+        width: 893px;
+    }
 }

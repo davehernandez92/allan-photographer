@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
-import allan from "../../public/images/allan2.jpg";
+import allan from "../../public/images/allan.jpg";
 import nosotros from "../../public/images/nosotros.jpg";
 import nosotros2 from "../../public/images/nosotros2.jpg";
 

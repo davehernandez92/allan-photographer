@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
@@ -9,80 +9,83 @@ import styles from "../ui/aboutPage.module.css";
 import allan from "../../../public/images/allan2.jpg";
 
 export default function AcercaPage() {
-
-
-  const images = [
-    {
-      name: "carousel1",
-      width: "600",
-      height: "1000",
-    },
-    {
-      name: "carousel2",
-      width: "600",
-      height: "1000",
-    },
-    {
-      name: "carousel3",
-      width: "600",
-      height: "1000",
-    },
-    
-  ];
+ 
   return (
     <>
       <motion.main
-      initial={{ opacity: 0 , y:12}}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{
           opacity: 1,
-          y:0,
+          y: 0,
           transition: { delay: 0.3, duration: 0.5 },
         }}
         viewport={{ once: true }}
-        className={`containerP w-full flex flex-col items-center gap-8 md:gap-10 ${styles.main}`}
+        className={`containerP w-full flex flex-col items-center gap-8 md:gap-10 lg:gap-0 ${styles.main}`}
       >
         <div
-        
-         className={` flex flex-col gap-3 md:text-center ${styles.heading}`}>
+          className={` flex flex-col gap-3 md:text-center lg:mb-10 ${styles.heading}`}
+        >
           <h1>¡Encantado de conocerte!</h1>
-          <h2>Soy Allan Banuelos.</h2>
+          <h2>Soy Allan Bañuelos.</h2>
           <p>Fotógrafo en Acapulco, México.</p>
         </div>
+        <div className={`flex flex-col gap-7 lg:flex-row  ${styles.nosotros}`}>
+          <Image
+            src={allan}
+            width={450}
+            height={535}
+            alt="Porta retrato de Allan Banuelos"
+            className={` lg:hidden ${styles.imgAllan}`}
+          />
+          <Image
+            src={allan}
+            width={860}
+            height={860}
+            alt="Porta retrato de Allan Banuelos"
+            className={`lg:block hidden w-1/2 ${styles.imgAllan}`}
+          />
+          <div className={`lg:w-1/2 flex flex-col gap-7  ${styles.txt__wrapR}`}>
+            <p>
+              He estado en esta bella profesión desde hace más de 5 años; sin
+              duda, cambió mi vida en todos los aspectos y, por supuesto, la
+              fotografía de bodas apareció para quedarse.
+            </p>
 
-        <Image
-          src={allan}
-          width={443}
-          height={582}
-          alt="Porta retrato de Allan Banuelos"
-          className={` lg:hidden ${styles.imgAllan}`}
-        />
-        <Image
-          src={allan}
-          width={883}
-          height={1097}
-          alt="Porta retrato de Allan Banuelos"
-          className={`lg:block hidden ${styles.imgAllan}`}
-        />
+            <p>
+              Mis comienzos se dieron debido a la gran admiración que tengo por
+              las puestas de sol, arquitectura y naturaleza que tenemos en
+              México.
+            </p>
 
-        <div className="flex flex-col gap-7 ">
-          <p>
-            He estado en esta bella profesión desde hace más de 5 años; sin
-            duda, cambió mi vida en todos los aspectos y, por supuesto, la
-            fotografía de bodas apareció para quedarse.
+            <p>
+            Durante mi proceso fotográfico, me di cuenta de que el amor de
+            pareja tiene algo en común con todo lo anterior, y es que son
+            únicos. Cada amor es diferente y capturarlo me llena de emoción.
           </p>
 
           <p>
-            Mis comienzos se dieron debido a la gran admiración que tengo por
-            las puestas de sol, arquitectura y naturaleza que tenemos en México.
+            Me considero una persona apasionada, extrovertida y siempre
+            dispuesta a hacer sentir cómodas a las personas que me rodean.
           </p>
-
+          </div>
+        </div>
+        <div className={`flex flex-col gap-7 lg:flex-row-reverse ${styles.nosotros}`}>
           <CldImage
             src="bodas/bnywhoqklptvq9qeheqq"
             width={908}
             height={667}
             alt="Imagen de novia en Acapulco"
+            className="lg:hidden"
+          />
+          <Image
+            src={allan}
+            width={860}
+            height={860}
+            alt="Porta retrato de Allan Banuelos"
+            className={`lg:block hidden w-1/2 ${styles.imgAllan}`}
           />
 
+          <div className={`lg:w-1/2 flex flex-col gap-7 ${styles.txt__wrapL}`}>
           <p>
             Durante mi proceso fotográfico, me di cuenta de que el amor de
             pareja tiene algo en común con todo lo anterior, y es que son
@@ -93,7 +96,15 @@ export default function AcercaPage() {
             Me considero una persona apasionada, extrovertida y siempre
             dispuesta a hacer sentir cómodas a las personas que me rodean.
           </p>
-          <CldImage
+         
+
+          </div>
+
+          
+        </div>
+
+        <div className="flex flex-col gap-7">
+        <CldImage
             src="pedidas/kxk9to6j5ccvvc2ry36g"
             width={410}
             height={550}
@@ -102,13 +113,13 @@ export default function AcercaPage() {
           />
           <CldImage
             src="bodas/carousel6"
-            width={908}
-            height={667}
+            width={1162}
+            height={780}
             alt="Imagen de boda en Acapulco"
-            className="hidden md:block"
+            className={`hidden md:inline-block md:mx-auto md:mt-36 ${styles.imgBoda}`}
           />
 
-          <p>
+          <p className="lg:py-10 lg:px-20 lg:mx-20">
             En cada clic del obturador, busco capturar no solo imágenes, sino
             emociones; poder captar cada momento, desde las risas espontáneas
             hasta los abrazos llenos de amor. Cada fotografía cuenta una
@@ -123,12 +134,11 @@ export default function AcercaPage() {
             hablemos acerca de tu historia.
           </p>
 
-          
-        <Button className={`mt-4 ${styles.button}`}  asChild>
-          <Link href="/contacto" className={styles.button__link}>
-            CONTACTO
-          </Link>
-        </Button>
+          <Button className={`mt-4 ${styles.button}`} asChild>
+            <Link href="/contacto" className={styles.button__link}>
+              CONTACTO
+            </Link>
+          </Button>
         </div>
       </motion.main>
     </>
