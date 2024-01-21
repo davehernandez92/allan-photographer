@@ -2,12 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 import { CldImage } from "next-cloudinary";
-
-
 import { Button } from "@/components/ui/button";
-import allan from "../../public/images/op1Mobil.webp";
+import allan from "../../public/images/allan2.jpg";
 import nosotros from "../../public/images/nosotros.jpg";
 import nosotros2 from "../../public/images/nosotros2.jpg";
 
@@ -16,7 +13,6 @@ import nosotrosDesk2 from "../../public/images/op3.jpg";
 import nosotrosDesk3 from "../../public/images/op2.webp";
 import styles from "../app/ui/components/about.module.css";
 
-import CarouselImg from "./CarouselImg";
 
 export default function About() {
   return (
@@ -47,19 +43,19 @@ export default function About() {
           transition: { delay: 0.8, duration: 0.5 },
         }}
         viewport={{ once: true }}
-        className={` pt-10 w-full h-full  flex flex-col md:flex-row-reverse items-center ${styles.helloContainer}`}
+        className={` pt-10 w-full h-full  flex flex-col md:flex-row-reverse items-center containerP ${styles.helloContainer}`}
       >
         <Image
           src={allan}
-          width={369}
-          height={554}
+          width={443}
+          height={582}
           alt="Fotografia de Allan Banuelos "
           className={`lg:hidden ${styles.hello__img}`}
         />
         <Image
           src={allan}
-          width={492}
-          height={738}
+          width={783}
+          height={997}
           alt="Fotografia de Allan Banuelos "
           className={`lg:block hidden ${styles.hello__img}`}
         />
@@ -85,11 +81,14 @@ export default function About() {
             visualmente, sino que también te sumerjan en los sentimientos que
             los acompañan.
           </p>
-          <Button className="" variant="outline" asChild>
+          <div className="w-full flex items-center justify-center">
+          <Button className="w-full" variant="outline" asChild>
             <Link href="/nosotros" className={styles.button}>
-              Ver mas
+              VER MAS
             </Link>
           </Button>
+          </div>
+          
         </motion.div>
       </motion.div>
 
@@ -274,7 +273,6 @@ export default function About() {
         </div>
       </motion.div>
 
-      <CarouselImg/>
     </div>
   );
 }

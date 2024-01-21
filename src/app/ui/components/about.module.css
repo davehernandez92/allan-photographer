@@ -14,7 +14,7 @@
         rgb(254, 254, 254),
         rgb(241, 247, 252)
     );
-    padding: 2rem 1.2rem 3rem 1.2rem;
+    
     
     
     
@@ -32,7 +32,11 @@
     margin-bottom: .8rem;
 }
 .button{
-    margin: .5rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+    width: 120px;
+    height: 120PX;
+    height: auto;
+    align-items: center;
 }
 
 .us{
@@ -90,7 +94,7 @@
         justify-content: center;
         gap: 2rem;
         align-items: center;
-        padding: 4rem 3rem 0 3rem;
+        padding: 4rem 5rem 0 5rem;
     }
     .hello__img{
         width: 45%;
@@ -128,7 +132,8 @@
 
 @media screen and (min-width: 1024px) {
     .helloContainer{
-        gap: 10rem;
+        gap: 8rem;
+       
     }
     .hello__img{
         width: 492px;
@@ -149,8 +154,8 @@
         width: max-content;
     }
     .us{
-        padding-left: 13rem;
-        padding-right: 13rem;
+        padding-left: 14%;
+        padding-right: 14%;
     }
     .us__heading{
         text-align: center;

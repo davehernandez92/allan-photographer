@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import About from "@/components/about";
 import styles from "./ui/components/home.module.css";
+import Services from "@/components/Services";
+import CarouselImg from "@/components/CarouselImg";
 
 export default function Home() {
   return (
@@ -45,10 +47,14 @@ export default function Home() {
         />
          
         </div>
-        {/* Your hero content goes here */}
+     
       </motion.div>
 
       <About/>
+      <Services/>
+      <CarouselImg/>
+
+
     </main>
   );
 }
