@@ -103,6 +103,10 @@
     font-family: var(--font-txtHeading);
     letter-spacing: 1.3px;
   }
+  h3{
+    font-size: 17px;
+    font-family: var(--font-txtHeading);
+  }
   p{
     font-size: 17px;
     letter-spacing: 1.1px;

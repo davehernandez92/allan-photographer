@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
-import allan from "../../public/images/allan.jpg";
+import allan from "../../public/images/allan2.jpg";
 import nosotros from "../../public/images/nosotros.jpg";
 import nosotros2 from "../../public/images/nosotros2.jpg";
 
@@ -54,8 +54,8 @@ export default function About() {
         />
         <Image
           src={allan}
-          width={783}
-          height={997}
+          width={860}
+            height={860}
           alt="Fotografia de Allan Banuelos "
           className={`lg:block hidden ${styles.hello__img}`}
         />
