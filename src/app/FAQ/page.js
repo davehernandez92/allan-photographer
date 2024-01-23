@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { CldImage } from "next-cloudinary";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import styles from "../ui/components/faq.module.css";
 
 export default function FaqPage() {
@@ -25,7 +25,7 @@ export default function FaqPage() {
   const textY2 = useTransform(scrollYProgress, [0, 0.69], ["0%", "-200%"]);
 
   return (
-    <main ref={ref}>
+    <main>
       <div
         className={` flex flex-col items-center justify-center relative ${styles.hero}`}
       >
@@ -159,7 +159,9 @@ export default function FaqPage() {
           className={`   flex flex-col   md:flex-row containerP ${styles.section}`}
         >
           <div className="py-7 flex md:justify-center md:items-center ">
-            <h2 className={` px-2 ${styles.section__title}`}>Fotografía en pareja</h2>
+            <h2 className={` px-2 ${styles.section__title}`}>
+              Fotografía en pareja
+            </h2>
           </div>
           <Accordion type="single" collapsible className="md:w-2/3">
             <AccordionItem value="item-1">
@@ -211,7 +213,9 @@ export default function FaqPage() {
           className={`   flex flex-col   md:flex-row containerP ${styles.section}`}
         >
           <div className="py-7 flex md:justify-center md:items-center">
-            <h2 className={` px-3 ${styles.section__title}`}>Fotografia de Bodas</h2>
+            <h2 className={` px-3 ${styles.section__title}`}>
+              Fotografia de Bodas
+            </h2>
           </div>
           <Accordion type="single" collapsible className="md:w-2/3">
             <AccordionItem value="item-1">
@@ -350,6 +354,56 @@ export default function FaqPage() {
           </Accordion>
         </motion.section>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: { delay: 0.4, duration: 0.5 },
+        }}
+        className={` mt-10 containerP flex flex-col gap-8 justify-center align-middle items-center md:pt-0  ${styles.contacto}`}
+      >
+        <motion.div
+        initial={{ opacity: 0, y:5 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.3, duration: 0.45 },
+        }}
+          className={`w-full flex flex-col gap-3 ${styles.contacto__headings} `}
+        >
+          <h3> ¿Tienes mas preguntas?</h3>
+          <p>Ponte en contacto y con gusto las aclaramos</p>
+        </motion.div>
+
+        <div className="relative ">
+          <div className={styles.images__div}>
+            <CldImage
+              src="bodas/c7ftftbnakmacw6ufevf.jpg"
+              width={1200}
+              height={800}
+              alt="Imagen de boda en Acapulco"
+              className={`hidden md:block ${styles.contact__img}`}
+            />
+            <CldImage
+              src="bodas/c7ftftbnakmacw6ufevf.jpg"
+              width={600}
+              height={400}
+              alt="Imagen de boda en Acapulco"
+              className={`md:hidden ${styles.contact__img}`}
+            />
+          </div>
+          <div
+            className={`flex flex-col items-center w-full  ${styles.contact__btn}`}
+          >
+            <Button className={` opacity-[0.75] md:w-[20%] lg:h-[50px] `}>
+              <Link href={"/contacto"} className={styles.button__txt}>
+                Contacto
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </motion.div>
     </main>
   );
 }
