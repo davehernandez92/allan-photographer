@@ -33,17 +33,19 @@ export default function FaqPage() {
           className={`absolute inset-0 bg-cover bg-center ${styles.heroImg}`}
         >
           <CldImage
-            src={"bodas/03122022-_DSC3709-min_ayga2o.jpg"}
+            src={"bodas/03122022-_DSC3709-min_ayga2o"}
             width={1400}
             height={800}
             alt="Imagen hero"
+            priority={true}
             className={`hidden md:block absolute top-0 left-0 w-full h-full object-cover`}
           />
           <CldImage
-            src={"bodas/14102023-DSC05417-min_bqkbuy.jpg"}
+            src={"bodas/14102023-DSC05417-min_bqkbuy"}
             width={630}
             height={950}
             alt="Imagen hero"
+            priority={true}
             className={`md:hidden absolute top-0 left-0 w-full h-full object-cover`}
           />
 
@@ -379,14 +381,14 @@ export default function FaqPage() {
         <div className="relative ">
           <div className={styles.images__div}>
             <CldImage
-              src="bodas/c7ftftbnakmacw6ufevf.jpg"
+              src="bodas/c7ftftbnakmacw6ufevf"
               width={1050}
               height={700}
               alt="Imagen de boda en Acapulco"
               className={`hidden md:block ${styles.contact__img}`}
             />
             <CldImage
-              src="bodas/c7ftftbnakmacw6ufevf.jpg"
+              src="bodas/c7ftftbnakmacw6ufevf"
               width={600}
               height={400}
               alt="Imagen de boda en Acapulco"
