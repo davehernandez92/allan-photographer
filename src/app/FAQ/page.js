@@ -380,8 +380,8 @@ export default function FaqPage() {
           <div className={styles.images__div}>
             <CldImage
               src="bodas/c7ftftbnakmacw6ufevf.jpg"
-              width={1200}
-              height={800}
+              width={1050}
+              height={700}
               alt="Imagen de boda en Acapulco"
               className={`hidden md:block ${styles.contact__img}`}
             />
