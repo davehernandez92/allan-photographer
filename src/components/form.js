@@ -63,13 +63,13 @@ const Form = () => {
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: { delay: 0.1235, duration: 0.3 },
+          transition: { delay: 0.3, duration: 0.45 },
         }}
         viewport={{ once: true }}
       onSubmit={handleSubmit}
       className={` pt-5 ${styles.form}`}
     >
-      <h1 > Contactanos </h1>
+      <h1 > Contáctanos </h1>
       <div className={styles.formgroup}>
         <div className="flex flex-col w-full max-w-sm  gap-4 lg:max-w-[30rem]">
           <Label htmlFor="name">Nombre</Label>

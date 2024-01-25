@@ -104,15 +104,15 @@ export default function Header() {
       opacity: 1,
       y: 1500,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
       },
     },
     menuClose: {
       opacity: 0,
       y: -1500,
       transition: {
-        delay: 0.5,
-        duration: 2.7,
+        delay: 0.3,
+        duration: .5,
       },
     },
   };
