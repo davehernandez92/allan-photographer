@@ -3,6 +3,8 @@ import { Crimson_Text, Playfair_Display } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from '@/components/footer';
+import { Toaster } from "@/components/ui/toaster"
+
 
 export const txtRegular = Crimson_Text({ 
   subsets: ['latin'], 
@@ -37,6 +39,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer/>
+        <Toaster />
       </body>
     </html>
   );

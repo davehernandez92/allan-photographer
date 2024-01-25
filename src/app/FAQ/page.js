@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -13,6 +13,7 @@ import {
 import { CldImage } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
 import styles from "../ui/components/faq.module.css";
+import imgMobile from '../../../public/images/faqMobile.webp'
 
 export default function FaqPage() {
   const ref = useRef(null);
@@ -33,15 +34,14 @@ export default function FaqPage() {
           className={`absolute inset-0 bg-cover bg-center ${styles.heroImg}`}
         >
           <CldImage
-            src={"bodas/03122022-_DSC3709-min_ayga2o"}
+            src={"bodas/03122022-_DSC3709-min_ayga2o-_1__uibfz0"}
             width={1400}
             height={800}
             alt="Imagen hero"
-            priority={true}
             className={`hidden md:block absolute top-0 left-0 w-full h-full object-cover`}
           />
-          <CldImage
-            src={"bodas/14102023-DSC05417-min_bqkbuy"}
+          <Image
+            src={imgMobile}
             width={630}
             height={950}
             alt="Imagen hero"

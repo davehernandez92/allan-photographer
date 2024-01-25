@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 
 import styles from "../ui/aboutPage.module.css";
 import allan from "../../../public/images/allan2.jpg";
+import square from "../../../public/images/nosotrosSquare.jpg";
 
 export default function AcercaPage() {
  
@@ -29,7 +30,7 @@ export default function AcercaPage() {
           <h2>Soy Allan Bañuelos.</h2>
           <p>Fotógrafo en Acapulco, México.</p>
         </div>
-        <div className={`flex flex-col gap-7 lg:flex-row  ${styles.nosotros}`}>
+        <div className={`flex flex-col gap-7 md:items-center lg:flex-row  ${styles.nosotros}`}>
           <Image
             src={allan}
             width={450}
@@ -57,28 +58,19 @@ export default function AcercaPage() {
               México.
             </p>
 
-            <p>
-            Durante mi proceso fotográfico, me di cuenta de que el amor de
-            pareja tiene algo en común con todo lo anterior, y es que son
-            únicos. Cada amor es diferente y capturarlo me llena de emoción.
-          </p>
-
-          <p>
-            Me considero una persona apasionada, extrovertida y siempre
-            dispuesta a hacer sentir cómodas a las personas que me rodean.
-          </p>
+          
           </div>
         </div>
-        <div className={`flex flex-col gap-7 lg:flex-row-reverse ${styles.nosotros}`}>
+        <div className={`flex flex-col gap-7  lg:flex-row-reverse ${styles.nosotros}`}>
           <CldImage
-            src="bodas/bnywhoqklptvq9qeheqq"
+            src="bodas/novia"
             width={908}
             height={667}
             alt="Imagen de novia en Acapulco"
             className="lg:hidden"
           />
           <Image
-            src={allan}
+            src={square}
             width={860}
             height={860}
             alt="Porta retrato de Allan Banuelos"
@@ -103,20 +95,28 @@ export default function AcercaPage() {
           
         </div>
 
-        <div className="flex flex-col gap-7">
+        <motion.div 
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.333, duration: 0.6 },
+        }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-7">
         <CldImage
             src="pedidas/kxk9to6j5ccvvc2ry36g"
             width={410}
-            height={550}
+            height={500}
             alt="Imagen de pareja en Acapulco"
             className="md:hidden"
           />
           <CldImage
-            src="bodas/carousel6"
-            width={1162}
-            height={780}
-            alt="Imagen de boda en Acapulco"
-            className={`hidden md:inline-block md:mx-auto md:mt-36 ${styles.imgBoda}`}
+            src="bodas/09092023-DSC07211-min_qwb91f_eqv6va"
+            width={1100}
+            height={730}
+            alt="Imagen de novios en Acapulco"
+            className={`hidden md:inline-block md:mx-auto md:mt-20 lg:mt-36 ${styles.imgBoda}`}
           />
 
           <p className="lg:py-10 lg:px-20 lg:mx-20">
@@ -126,9 +126,9 @@ export default function AcercaPage() {
             historia que compartes, y me comprometo a hacer que cada una sea tan
             única como tú.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-7 mt-8 last:items-center">
+        <div className="flex flex-col gap-7 mt-8 last:items-center md:mb-24">
           <p>
             No puedo esperar para saber más sobre ti. Pongámonos en contacto y
             hablemos acerca de tu historia.

@@ -53,10 +53,16 @@
 
   .images__div{
     position: relative;
+    margin-bottom: 2rem;
     
   }
   .contacto{
-    background-color: var(--primary3);
+    background: hsla(0, 11%, 98%, 1);
+
+background: linear-gradient(360deg, hsla(0, 11%, 98%, 1) 0%, hsla(41, 57%, 89%, 1) 50%, hsla(0, 11%, 98%, 1) 100%);
+
+
+
     min-height: 80vh;
     width: 100vw;
   }
@@ -70,7 +76,7 @@
 
   .contact__btn{
     position: absolute;
-    top: 80%; /* adjust as needed */
+    top: 70%; /* adjust as needed */
     left: 50%; /* adjust as needed */
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -105,7 +111,7 @@
   @media screen and (min-width: 1020px) {
     
     .hero__txt{
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .container{
         padding: 8rem 0;
@@ -133,6 +139,7 @@
         position: absolute;
         z-index: 2;
         text-align: center;
+      
     }
     .contacto__headings h3{
         font-size: 3.5rem;

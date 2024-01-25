@@ -4,10 +4,10 @@
  
 @layer base {
   :root {
-    --primary: hsl(41, 45%, 84%);
-    --secondary:  #A17E7F;
+    --primary: #f9edd3;
+    --secondaryC:  #A17E7F;
     --white: #fbfafa;
-    --black: hsl(240,10%, 3.9%);
+    --black: #03031b;
     --primary2: #114655;
     --primary3: #dfd0c2;
 

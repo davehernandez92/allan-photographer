@@ -29,16 +29,28 @@
     .button{
         width: 20%;
     }
+
+    .txt__wrapR,
+    .txt__wrapL{
+        padding: 2rem 0;
+    }
 }
 
 @media screen and (min-width: 1020px) {
+    .heading{
+        margin-bottom: 5rem;
+    }
     .heading h1 {
-        font-size:3rem;
+        font-size:3.4rem;
         font-weight: 600;
     
     }
+    .heading h2 {
+        font-size:2.3rem;
+       
+    
+    }
     .nosotros{
-        
         gap: 0;
         padding: 0 5rem;
         justify-content: center;
@@ -47,10 +59,10 @@
     }
 
     .txt__wrapR{
-        padding-left: 2rem;
+        padding:0 0 0 2rem;
     }
     .txt__wrapL{
-        padding-right: 2rem;
+        padding:0 2rem 0 0;
     }
     .imgBoda{
         height: 590px;
