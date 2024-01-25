@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label";
 
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-// import { sendEmail } from "../app/api/sendEmail"
 import { handleSubmitLogic } from "../app/api/handleSubmit"; // Import the function
 
 const Form = () => {
@@ -48,7 +47,7 @@ const Form = () => {
     console.log(data);
 
     // Use the imported handleSubmitLogic function
-    await handleSubmitLogic(data, toast);
+    // await handleSubmitLogic(data, toast);
 
     // Reset form fields
     setName("");
