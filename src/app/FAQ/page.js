@@ -398,11 +398,12 @@ export default function FaqPage() {
           <div
             className={`flex flex-col items-center w-full  ${styles.contact__btn}`}
           >
-            <Button className={` opacity-[0.75] md:w-[20%] lg:h-[50px] `}>
-              <Link href={"/contacto"} className={styles.button__txt}>
-                Contacto
+            
+              <Link href={"/contacto"} className={` opacity-[0.75] lg:h-[50px] `} >
+              <Button className={styles.button__txt} >Contacto</Button>
+                
+                
               </Link>
-            </Button>
           </div>
         </div>
       </motion.div>

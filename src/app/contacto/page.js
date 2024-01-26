@@ -4,10 +4,14 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast"
+import {motion} from 'framer-motion'
 import image from "../../../public/images/contacto.webp";
 import imageM from "../../../public/images/contactoM.jpg";
 import styles from "../ui/components/form.module.css";
 import Image from "next/image";
+import { Link } from "lucide-react";
 
 export default function Page() {
     
@@ -15,6 +19,8 @@ export default function Page() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(""); // New state for phone number
   const [projectDetails, setProjectDetails] = useState("");
+ 
+  const { toast } = useToast()
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -47,6 +53,9 @@ export default function Page() {
     // Use the imported handleSubmitLogic function
     // await handleSubmitLogic(data, toast);
 
+    toast({
+        description: "Tu mensaje ha sido enviado.",
+      })
     // Reset form fields
     setName("");
     setEmail("");
@@ -58,7 +67,13 @@ export default function Page() {
     return (
         <main className="containerP lg:px-15">
           <div className="flex flex-col gap-5 pt-6 md:grid md:grid-cols-2 md:gap-6  ">
-            <div className="flex justify-center">
+            <motion.div initial={{ opacity: 0, x: -12 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 0.3, duration: 0.5 },
+        }}
+        viewport={{ once: true }} className="flex justify-center">
               <Image
                 src={imageM}
                 width={500}
@@ -73,16 +88,22 @@ export default function Page() {
                 alt="Imagen de pareja en Acapulco "
                 className={`hidden md:block  ${styles.img__Contacto}`}
               />
-            </div>
+            </motion.div>
     
             {/* FORM  */}
-    
-            <form onSubmit={handleSubmit} className={` pt-5 ${styles.form}`}>
+            
+            <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, x: 12 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 0.3, duration: 0.5 },
+        }}
+        viewport={{ once: true }} className={` pt-5 ${styles.form}`}>
               <h1> Contáctanos </h1>
               <div className={styles.formgroup}>
                 <div className="flex flex-col w-full max-w-sm  gap-4 lg:max-w-[30rem]">
                   <Label htmlFor="name">Nombre</Label>
-                  <input
+                  <Input
                     type="text"
                     id="name"
                     name=""
@@ -95,7 +116,7 @@ export default function Page() {
     
                   <Label htmlFor="email">Email</Label>
     
-                  <input
+                  <Input
                     type="email"
                     id="email"
                     name="email"
@@ -109,7 +130,7 @@ export default function Page() {
                   {/* New form group for phone number */}
     
                   <Label htmlFor="phoneNumber">Telefono</Label>
-                  <input
+                  <Input
                     type="tel"
                     id="phoneNumber"
                     name="phoneNumber"
@@ -121,7 +142,7 @@ export default function Page() {
                   />
     
                   <Label htmlFor="project-details">Cuentame sobre ti</Label>
-                  <textarea
+                  <Textarea
                     id="project-details"
                     name="project-details"
                     placeholder="Escriba detalles sobre su evento"
@@ -132,8 +153,11 @@ export default function Page() {
                   />
                  
                 </div>
+                <Button type="submit" className="mt-6 w-full md:w-1/2    md:mt-8">
+                    Enviar mensaje
+                </Button>
               </div>
-            </form>
+            </motion.form>
           </div>
         </main>
       );
