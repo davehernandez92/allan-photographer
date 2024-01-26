@@ -1,19 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-
 import Image from "next/image";
 import { Button } from "@/components/ui/input";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea"
-
 import image from "../../../public/images/contacto.webp";
 import imageM from "../../../public/images/contactoM.jpg";
 import styles from "../ui/components/form.module.css";
 
 
-export default function ContactoPage() {
+export default function ContactPage() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

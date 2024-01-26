@@ -388,9 +388,9 @@ export default function Header() {
                 animate={isOpen ? "fadeIn4" : "fadeOut"}
               >
                 <Link
-                  href="/contacto"
+                  href="/contact"
                   className={`${styles.menu__txt} ${
-                    pathname === "/Contacto" ? "currentLink" : ""
+                    pathname === "/contact" ? "currentLink" : ""
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

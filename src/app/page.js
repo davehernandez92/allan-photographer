@@ -31,7 +31,7 @@ export default function Home() {
             className=" absolute top-0 left-0 w-full h-full object-cover"
           />
 
-          <h1 className={`absolute z-10 ${styles.hero__title}`}>
+          <h1 className={`absolute ${styles.hero__title}`}>
             Wedding Photographer.
           </h1>
           <div className={styles.overlay}></div>
