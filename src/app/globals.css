@@ -8,8 +8,9 @@
     --secondaryC:  #A17E7F;
     --white: #fbfafa;
     --black: #03031b;
-    --primary2: #114655;
+    --primary2: #EE9D83;
     --primary3: #dfd0c2;
+    --secondary:  rgb(142, 41, 10);
 
     --background: 254, 254, 254;
     --foreground: 240 10% 3.9%;
@@ -89,7 +90,7 @@
   }
   body {
     color: rgb(var(--foreground-rgb));
-    font-size: 16px;
+    font-size: 17px;
     overflow-x: hidden; 
     scroll-behavior: smooth;
     }

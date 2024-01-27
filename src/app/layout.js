@@ -1,5 +1,5 @@
 
-import { Crimson_Text, Playfair_Display } from 'next/font/google'
+import { Crimson_Text, Playfair_Display, Ubuntu } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from '@/components/footer';
@@ -24,6 +24,14 @@ export const txtHeading = Playfair_Display({
 
 })
 
+export const davedev = Ubuntu({
+  subsets: ['latin'],
+  variable: '--font-davedev',
+  weight: ['400','500','700'],
+  style: ['normal'],
+  display: 'swap',
+})
+
 
 export const metadata = {
   title: "Allan Banuelos Fotografia",
@@ -34,7 +42,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${txtHeading.variable} ${txtRegular.variable}`}>
+    <html lang="es" className={`${txtHeading.variable} ${txtRegular.variable} ${davedev.variable}`}>
       <body>
         <Header />
         {children}

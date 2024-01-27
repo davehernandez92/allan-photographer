@@ -1,4 +1,5 @@
 .background{
+    margin-top: 5rem;
     background: hsl(28, 80%, 84%);
     background: linear-gradient(0deg, hsla(14, 76%, 72%, 1) 0%, hsl(28, 80%, 84%) 44%, hsla(228, 7%, 86%, 1) 81%, hsla(0, 11%, 98%, 1) 100%);
 }
@@ -9,56 +10,205 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
     justify-content:space-around;
     margin: 2rem 0 0 0;
     padding: 2rem 0 4rem 0;
     
 }
-.logo{
-    width: 200px;
-    height: 120px;
-}
-.email__container{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.email__container a {
-    font-size: 1.2rem;
-    
-}
-.social__txt{
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-.social__emails  {
-    gap: 0.7rem;
-    font-size: 1.1rem;
-}
-.contact__phone{
-    margin-top: 2rem;
-}
-.contact__numbers{
-    gap: .8rem;
-    letter-spacing: 1.1px;
-}
-.contact__numbers span {
-    font-weight: bolder;
-    
+
+.heading h2 {
+    font-size: 34px;
 }
 
-@media screen and (min-width: 868px){
+
+
+.heading__link {
+    font-size: 34px;
+    font-family: var(--font-txtHeading);
+    text-decoration: underline;
+    text-underline-offset: 0.45rem; 
+    text-decoration-thickness: 1.39px; 
+    text-decoration-color: var(--primary2); 
+    margin: 1px 0;
+    letter-spacing: 1.1px;
+    transition: all .3s ease;
+    
+}
+.heading__link:active{
+    transform: scale(1.05);
+}
+.contact{
+    margin-top: 1.7rem;
+}
+
+.contact h3{
+    color:  rgb(142, 41, 10);
+    font-size: 19px;
+    letter-spacing: 1.2px;
+}
+.contact a {
+    font-size: 19px;
+    letter-spacing: 1.2px;
+}
+.contact span {
+    color:  rgb(142, 41, 10);
+    font-weight: 600;
+}
+.contact p {
+    font-size: 19px;
+    letter-spacing: 1.2px;
+}
+
+.column__pages, .column__socials {
+    margin-top: 1rem;
+    padding:  3rem 0.75rem;   
+    border: 1px solid rgba(212, 102, 102, 0.272);
+}
+.column__link{
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    transition: all .4s ease-in
+}
+
+.column__link:active {
+   
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem; 
+    text-decoration-thickness: 1.39px; 
+    text-decoration-color: var(--primary2); 
+}
+
+.davedev{
+ font-size: 14px;
+ font-family: var(--font-davedev);
+ letter-spacing: 1.2px;
+ color: #17171bf3;
+ transition: all .5s ease;
+}
+.span{
+    font-weight: 500;
+    font-size: 17px;
+    color: #f4f4f7b9 ;
+    margin-right: .2rem;
+}
+.span2{
+    font-size: 17px;
+    color: #c62c2c;
+    font-weight: 500;
+}
+.davedev:active{
+    
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem; 
+    text-decoration-thickness: 1.39px; 
+    text-decoration-color: var(--primary2); 
+}
+
+
+@media screen and (min-width: 768px){
     .footer{
+       
         flex-direction: row;
-        padding: 4rem 0 4rem 0;
+        gap: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: unset;
     }
-    .wrapper{
-        width: 45%;
-        justify-content: space-between;
-        align-content: space-between;
+    .footer__wrap{
+        padding:  3rem 0.5rem;   
+        border: 1px solid rgba(212, 102, 102,  0.272);
+    }
+    
+    .heading h2 {
+        font-size: 45px;
+    }
+
+   
+    .heading__link{
+        font-size: 40px;
+        text-decoration: underline;
+        text-underline-offset: 0.65rem; 
+        text-decoration-thickness: 1.5px; 
+        text-decoration-color: var(--primary2); 
+        transition: all .3s ease;
+    }
+    .heading__link:hover {
+        transform:translateX(1%);
+        text-decoration-color: transparent; 
+    }
+
+    .column__pages, .column__socials {
+        margin-top: 0;
+        padding-top: 4rem;
+        
     }
 }
-  
+@media screen and (min-width: 1080px) {
+    .background{
+        height: 90vh;
+        margin-top: 15rem;
+    }
+    .footer{
+        padding: 2rem 0;
+        height: 75%;
+    }
+    .footer__wrap{
+        padding-left: 4rem;
+    }
+    .heading h2 {
+        font-size: 3.8rem;
+        
+    }
+    .heading__link{
+        font-size: 3.6rem;
+        margin-top: 0;
+      
+        width: fit-content;
+    }
+
+
+    .contact h3{
+        font-size: 1.8rem;
+    }
+    .contact a {
+        font-size: 1.3rem;
+        transition: all .3s ease-in;
+        text-decoration: none;
+        text-decoration-color: var(--primary2);
+    }
+    .contact__a:hover {
+        font-size: 1.32rem;
+        text-decoration: underline;
+        text-decoration-color: var(--primary2);
+        text-underline-offset: 0.65rem; 
+        text-decoration-thickness: 1.1px; 
+         
+    }
+    
+    .column__pages, .column__socials {
+        margin-top: 0;
+        padding-top: 4rem;
+        padding-left: 2rem;
+        
+    }
+    .column__link{
+        font-size: 1.3rem;
+        text-decoration: none;
+        text-decoration-color: var(--primary2);
+        transition: all .45s ease-in;
+    }
+    .column__link:hover{
+        font-size: 1.34rem;
+        text-decoration: underline;
+        text-decoration-color: var(--primary2);
+        text-underline-offset: 0.65rem; 
+        text-decoration-thickness: 1.1px; 
+
+    }
+    .column__link_h4:hover{
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+}
