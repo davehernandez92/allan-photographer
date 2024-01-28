@@ -1,11 +1,13 @@
 "use client";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import About from "@/components/about";
 import styles from "./ui/components/home.module.css";
 import Services from "@/components/Services";
 import CarouselImg from "@/components/CarouselImg";
+import bannerImg from '../../public/images/op1.webp'
+import heroMobile from '../../public/images/op1Mobil.webp'
 
 export default function Home() {
   return (
@@ -23,8 +25,8 @@ export default function Home() {
         <div
           className={`absolute inset-0 bg-cover bg-center hidden md:block  ${styles.heroImg}`}
         >
-          <CldImage
-            src="https://res.cloudinary.com/dtsowbfck/image/upload/v1705449499/bodas/rvx6qoyrukg1igtgrc72.jpg"
+          <Image
+            src={bannerImg}
             width={1500}
             height={1000}
             alt="Imagen de boda background"
@@ -39,8 +41,8 @@ export default function Home() {
         <div
           className={`absolute inset-0 bg-cover bg-center block md:hidden  ${styles.heroImg_mobile}`}
         >
-          <CldImage
-            src="https://res.cloudinary.com/dtsowbfck/image/upload/v1705449384/bodas/eubnkvv6aqyx5vjebhx5.jpg"
+          <Image
+            src={heroMobile}
             width={923}
             height={1300}
             alt="Imagen de boda background"

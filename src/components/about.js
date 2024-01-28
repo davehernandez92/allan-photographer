@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
 import allan from "../../public/images/allan2.jpg";
-import nosotros from "../../public/images/nosotros.jpg";
-import nosotros2 from "../../public/images/nosotros2.jpg";
+import nosotros from "../../public/images/nosotros.webp";
+import nosotros2 from "../../public/images/nosotros2.webp";
+import nosotros3 from "../../public/images/nosotros3.webp";
 
 import nosotrosDesk from "../../public/images/nosotrosDesktop.jpg";
 import nosotrosDesk2 from "../../public/images/op3.jpg";
@@ -246,8 +247,8 @@ export default function About() {
               viewport={{ once: true }}
               className={` mb-5 ${styles.img__back}`}
             >
-              <CldImage
-                src={"bodas/vestidoBodas.jpg"}
+              <Image
+                src={nosotros3}
                 width={432}
                 height={650}
                 alt="Sesion de bodas "
