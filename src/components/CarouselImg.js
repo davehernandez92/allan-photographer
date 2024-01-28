@@ -81,7 +81,7 @@ export default function CarouselImg() {
           {images.map((image) => (
             <CldImage
               key={image.name}
-              src={`bodas/${image.name}.jpg`}
+              src={`bodas/carousel/${image.name}.jpg`}
               width={image.width}
               height={image.height}
               alt="Imagen de boda galeria"
@@ -96,9 +96,9 @@ export default function CarouselImg() {
               <CarouselItem key={image.name} className=" md:basis-96  ">
                 <div className="p-1">
                   <CldImage
-                    priority={true}
+                    
                     key={image.name}
-                    src={`bodas/${image.name}.jpg`}
+                    src={`bodas/carousel/${image.name}.webp`}
                     width={image.width}
                     height={image.height}
                     alt={`Fotografia para el carousel`}
