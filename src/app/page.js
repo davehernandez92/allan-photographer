@@ -45,6 +45,7 @@ export default function Home() {
             src={heroMobile}
             width={923}
             height={1300}
+            priority={true}
             alt="Imagen de boda background"
             className=" absolute top-0 left-0 w-full h-full object-contain"
           />

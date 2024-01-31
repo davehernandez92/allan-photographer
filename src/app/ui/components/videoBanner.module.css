@@ -1,0 +1,16 @@
+.title{
+    position: absolute;
+    font-size: 7rem;
+    z-index: 2;
+    color: var(--white);
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    
+
+}
+.controllers {
+    z-index: 2;
+    bottom: 1rem;
+    right: 2rem;
+}

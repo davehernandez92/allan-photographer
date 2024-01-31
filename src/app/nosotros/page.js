@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 import styles from "../ui/aboutPage.module.css";
 import allan from "../../../public/images/allan2.jpg";
-import square from "../../../public/images/nosotrosSquare.jpg";
+import square from "../../../public/images/square.webp";
 
 export default function AcercaPage() {
  

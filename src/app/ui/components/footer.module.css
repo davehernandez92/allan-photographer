@@ -147,12 +147,12 @@
 }
 @media screen and (min-width: 1080px) {
     .background{
-        height: 90vh;
+       
         margin-top: 15rem;
     }
     .footer{
         padding: 2rem 0;
-        height: 75%;
+        height: 100%;
     }
     .footer__wrap{
         padding-left: 4rem;

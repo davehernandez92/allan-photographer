@@ -26,7 +26,7 @@ export default function CarouselImg() {
       height: "1000",
     },
     {
-      name: "carousel3",
+      name: "carousel12",
       width: "600",
       height: "1000",
     },
@@ -81,7 +81,7 @@ export default function CarouselImg() {
           {images.map((image) => (
             <CldImage
               key={image.name}
-              src={`bodas/carousel/${image.name}.jpg`}
+              src={`bodas/carousel/${image.name}.webp`}
               width={image.width}
               height={image.height}
               alt="Imagen de boda galeria"
