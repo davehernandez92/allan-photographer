@@ -18,3 +18,42 @@
     height: 100%;
     background-color: rgba(21, 20, 20, 0.176);
 }
+.faq{
+    background-color: #d1d5db;
+}
+.faq h3{
+    color: #18181b;
+    font-size: 2.9rem;
+}
+.faq p {
+    color: #18181b;
+}
+@media screen and (min-width: 768px) {
+
+    .faq h3{
+        
+        font-size: 3.5rem;
+    }
+    .faq p {
+        font-size: 20px;
+    }
+    .button__link{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    
+    .faq{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .faq h3{
+        
+        font-size: 4rem;
+    }
+    .faq p {
+        font-size: 25px;
+        width: 50%;
+    }
+}

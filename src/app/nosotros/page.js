@@ -128,7 +128,7 @@ export default function AcercaPage() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-7 mt-8 last:items-center md:mb-24">
+        <div className="flex flex-col gap-7 mt-8 last:items-center md:mb-24 ">
           <p>
             No puedo esperar para saber más sobre ti. Pongámonos en contacto y
             hablemos acerca de tu historia.

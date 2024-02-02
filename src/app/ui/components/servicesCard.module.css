@@ -24,3 +24,51 @@
     text-align: center;
     font-style: italic;
 }
+.imgTablet{
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 1025px) {
+    .card{
+        margin-top: 6rem;
+    }
+    .card h2{
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    .card p{
+        width: 89%;
+        font-size: 22px;
+    }
+    .accordion__title{
+        font-size: 1.45rem;
+    }
+    .accordion__txt{
+        padding-top: 1rem;
+        gap: 2.5rem;
+    }
+    .accordion__txt h3{
+        font-size: 1.2rem;
+        font-weight: 600;
+        
+    }
+    .accordion__leyend {
+        font-weight: 600;
+        font-size: 15.5px;
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .images__div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imageDesk{
+        border-radius: 10px;
+    }
+}
+
