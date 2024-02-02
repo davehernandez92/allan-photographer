@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,6 +15,11 @@ import Image from "next/image";
 import { Link } from "lucide-react";
 
 export default function Page() {
+  const templateId = process.env.TEMPLATE_ID
+  const serviceID = process.env.SERVICE_ID
+  const publicKey = process.env.EMAIL_KEY
+  const form = useRef();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(""); // New state for phone number
@@ -39,27 +45,32 @@ export default function Page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
+    // Use the Email.js sendForm method to send the email
+  emailjs.sendForm('service', 'template_svoi5qj', form.current, 'F4vEx6oWCq2R6vHoY')
+  .then((result) => {
+    console.log('Email sent successfully:', result.text);
 
-    const data = {
-      recipientEmail: email,
-      customer: name,
-      phoneNumber: phoneNumber, // Include phone number in the data
-      text: `Nombre: ${name}\nEmail: ${email}\nTelefono: ${phoneNumber}\nDetalles: ${projectDetails}`,
-    };
-
-    console.log(data);
-
-    // Use the imported handleSubmitLogic function
-    // await handleSubmitLogic(data, toast);
-
+    // Display success message in the toast
     toast({
       description: "Tu mensaje ha sido enviado.",
     });
+
     // Reset form fields
     setName("");
     setEmail("");
     setPhoneNumber("");
     setProjectDetails("");
+  })
+  .catch((error) => {
+    console.error('Error sending email:', error.text);
+
+    // Display error message in the toast
+    toast({
+      description: "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      status: "error",
+    });
+  });
   };
 
   return (
@@ -93,15 +104,10 @@ export default function Page() {
 
         {/* FORM  */}
 
-        <motion.form
+        <form
+          ref={form}
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, x: 12 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { delay: 0.3, duration: 0.5 },
-          }}
-          viewport={{ once: true }}
+          
           className={` pt-5 ${styles.form}`}
         >
           <h1> Contáctanos </h1>
@@ -111,7 +117,7 @@ export default function Page() {
               <Input
                 type="text"
                 id="name"
-                name=""
+                name="customer"
                 placeholder="Ingrese su nombre"
                 value={name}
                 onChange={handleNameChange}
@@ -161,7 +167,7 @@ export default function Page() {
               Enviar mensaje
             </Button>
           </div>
-        </motion.form>
+        </form>
       </div>
     </main>
   );
