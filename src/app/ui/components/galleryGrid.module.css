@@ -1,0 +1,118 @@
+
+/* GALLERY  HERO  */
+.heroContainer {
+    background: hsla(0, 11%, 98%, 1);
+
+background: linear-gradient(90deg, hsla(0, 11%, 98%, 1) 0%, hsla(40, 32%, 89%, 1) 50%, hsla(0, 11%, 98%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(0, 11%, 98%, 1) 0%, hsla(40, 32%, 89%, 1) 50%, hsla(0, 11%, 98%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(0, 11%, 98%, 1) 0%, hsla(40, 32%, 89%, 1) 50%, hsla(0, 11%, 98%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fbfafa", endColorstr="#ECE6DA", GradientType=1 );
+}
+
+.img__gallery1{
+    height: 60%;
+    width: auto;
+}
+.img__gallery2{
+    width: 25%;
+    height: auto;
+}
+.img__gallery1,
+.img__gallery2 {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.titles{
+    justify-content: center;
+}
+.titles h1{
+    
+    font-size: 2.6rem;
+    transition: opacity .9s ease-out;
+    animation: fadeIn .8s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 0.85;
+        transform: translateY(0);
+    }
+}
+
+.img__gallery1 {
+    top: 5%;
+    left: 5%;
+    transition: opacity .8s ease-out;
+    animation: fadeIn .8s ease-out forwards; /* forwards keeps the final state after animation */
+}
+
+.img__gallery2 {
+    bottom: 5%;
+    right: 5%;
+    transition: opacity .7s ease-in;
+    animation: fadeIn .7s ease-in forwards; /* forwards keeps the final state after animation */
+}
+
+/* GALLERY  GRID   */
+
+.gallery__grid {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+
+  }
+  
+  .gallery__item {
+   
+    border-radius: 8px;
+    
+  }
+  .gallery__item img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 0px;
+    margin: 0 auto;
+}
+
+
+  @media screen and (min-width: 768px) {
+    .gallery__grid{
+        display: block;
+        width: 90%;
+        margin: 2rem auto;
+        columns: 2;
+        column-gap: 1.5rem;
+    }
+    .gallery__item{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .gallery__item img{
+        max-width: 100%;
+        border-radius: 0px;
+    }
+  }
+  @media screen and (min-width: 1020px) {
+    .heroContainer{
+        position: relative;
+    }
+    .gallery__grid{
+        width: 80%;
+        columns: 4;
+       
+    }
+    .titles h1 {
+        font-size: 6rem;
+        letter-spacing: 12px;
+    }
+    
+  }

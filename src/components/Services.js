@@ -23,12 +23,12 @@ export default function Services() {
         <div className={`lg:hidden ${styles.services__links}`}>
           <div className=" absolute w-full h-full text-center flex flex-col justify-center gap-12 items-center">
             <Button variant="ghost" className={styles.button}>
-              <Link href={"/servicios/bodas"} className={styles.service}>
+              <Link href={"/servicios"} className={styles.service}>
                 Bodas
               </Link>
             </Button>
             <Button variant="ghost" className={styles.button}>
-              <Link href={"/servicios/pedidas"} className={styles.service}>
+              <Link href={"/servicios"} className={styles.service}>
                 Pedidas
               </Link>
             </Button>
@@ -38,7 +38,7 @@ export default function Services() {
         <div className={` containerP hidden lg:visible ${styles.links__wrap}`}>
           <div className={` ${styles.services__desk}`}>
             <Link
-              href={"/servicios/bodas"}
+              href={"/servicios"}
               onMouseEnter={() => handleLinkHover("bodas")}
               className={`${styles.link__animation} ${activeLink === "pedidas" ? "active" : ""}`}
             >
@@ -46,7 +46,7 @@ export default function Services() {
             </Link>
 
             <Link
-              href={"/servicios/pedidas"}
+              href={"/servicios"}
               onMouseEnter={() => handleLinkHover("pedidas")}
               className={`${styles.link__animation} ${activeLink === "pedidas" ? "active" : ""}`}
             >
