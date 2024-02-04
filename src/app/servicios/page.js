@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import VideoBanner from "@/components/videoBanner";
 import BodasCard from "@/components/bodasCard";
 import ParejasCard from "@/components/parejasCard";
@@ -8,7 +9,7 @@ import ParejasCard from "@/components/parejasCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { CldImage } from "next-cloudinary";
+import mobileImg from '../../../public/images/serviciosMb.webp'
 import styles from "../ui/serviciosPage.module.css";
 
 export default function ServiciosPage() {
@@ -40,10 +41,10 @@ export default function ServiciosPage() {
       {isTabletOrDesktop && <VideoBanner />}
 
       <div className="md:hidden h-full relative ">
-        <CldImage
-          src="/bodas/14102023-DSC04884_gkyvyk.webp"
-          width={934}
-          height={1401}
+        <Image
+          src={mobileImg}
+          width={777}
+          height={1166}
           alt="Imagen de boda en atardecer Acapulco"
           className="w-full h-full pt-10 lg "
         />
