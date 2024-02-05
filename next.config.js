@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['res.cloudinary.com'],
+  images: {
+    remotePatterns: [
+      {
+        
+        hostname: 'res.cloudinary.com',
+       
+      },
+    ],
+  },
+      env: {
+        EMAIL_KEY: 'h9qODiCp9P-lnXJch',
       },
 }
 

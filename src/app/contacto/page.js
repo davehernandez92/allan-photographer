@@ -12,11 +12,12 @@ import image from "../../../public/images/contacto.webp";
 import imageM from "../../../public/images/square2.webp";
 import styles from "../ui/components/form.module.css";
 import Image from "next/image";
-import { Link } from "lucide-react";
+
+
+
 
 export default function Page() {
-  const templateId = process.env.TEMPLATE_ID
-  const serviceID = process.env.SERVICE_ID
+ 
   const publicKey = process.env.EMAIL_KEY
   const form = useRef();
 
@@ -45,9 +46,9 @@ export default function Page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    
     // Use the Email.js sendForm method to send the email
-  emailjs.sendForm('service', 'template_svoi5qj', form.current, 'F4vEx6oWCq2R6vHoY')
+  emailjs.sendForm('service', 'template_svoi5qj', form.current, publicKey)
   .then((result) => {
     console.log('Email sent successfully:', result.text);
 
