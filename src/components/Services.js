@@ -24,12 +24,12 @@ export default function Services() {
           <div className=" absolute w-full h-full text-center flex flex-col justify-center gap-12 items-center">
             <Button variant="ghost" className={styles.button}>
               <Link href={"/servicios"} className={styles.service}>
-                Bodas
+                BODAS
               </Link>
             </Button>
             <Button variant="ghost" className={styles.button}>
               <Link href={"/servicios"} className={styles.service}>
-                Pedidas
+                PAREJAS
               </Link>
             </Button>
           </div>
@@ -50,7 +50,7 @@ export default function Services() {
               onMouseEnter={() => handleLinkHover("pedidas")}
               className={`${styles.link__animation} ${activeLink === "pedidas" ? "active" : ""}`}
             >
-              PEDIDAS
+              PAREJAS
             </Link>
           </div>
 

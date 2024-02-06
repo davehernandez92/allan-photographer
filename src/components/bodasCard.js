@@ -111,9 +111,16 @@ export default function BodasCard() {
                 />
                 <p> Video resumen de 1 minuto para redes sociales</p>
               </div>
-              <p className={styles.accordion__leyend}>
-                No incluye tomas de drone
-              </p>
+              <div className="flex gap-2">
+                <Image
+                  src={circle}
+                  width={10}
+                  height={10}
+                  alt="circe svg"
+                  className={styles.circle}
+                />
+                <p> Icluye tomas de drone para tu video</p>
+              </div>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
