@@ -35,7 +35,7 @@ export const davedev = Ubuntu({
 
 export const metadata = {
   title: "Allan Banuelos Fotografia",
-  description: "Explora el mágico mundo de la fotografía de bodas con Allan Banuelos en Acapulco, Guerrero. Capturando los momentos eternos de amor y alegría. Contáctanos para servicios de fotografía de bodas memorables e impresionantes.",
+  description: "Explora el mágico mundo de la fotografía de bodas y de parejas con Allan Banuelos en Acapulco, Guerrero. Capturando los momentos eternos de amor y alegría. Contáctanos para servicios de fotografía de bodas memorables e impresionantes.",
   name:"viewport",
   content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 };
